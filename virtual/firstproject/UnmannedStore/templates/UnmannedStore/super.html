@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="https://blockly.webduino.io/lib/jquery-1.9.1.min.js"></script>
+    <script src="https://blockly.webduino.io/components/webduino-js/dist/webduino-all.min.js"></script>
+    <script src="https://blockly.webduino.io/lib/webduino-blockly.js"></script>
+    <script src="https://blockly.webduino.io/lib/firebase.js"></script>
+    <script src="https://blockly.webduino.io/lib/runtime.min.js"></script>
+</head>
+
+
+
+<script>
+    var ultrasonic;
+
+
+    boardReady({ device: 'mkYDX' }, function (board) {
+        board.systemReset();
+        board.samplingInterval = 20;
+        ultrasonic = getUltrasonic(board, 11, 10);
+        ultrasonic.ping(function (cm) {
+            console.log(ultrasonic.distance);
+            document.getElementById("demo-area-01-show").innerHTML = ultrasonic.distance;
+        }, 500);
+    });
+</script>
+
+<body>
+    <div>
+        <span id="demo-area-01-show">123</span>
+    </div>
+</body>
+
+</html>

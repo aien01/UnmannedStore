@@ -1,16 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../../static/js/bootstrap.css">
+    <script src="../../static/js/bootstrap.js"></script>
+    <style>
+        body {
+            background-image: url('../static/images/ai4.jpg');
+            padding: 0%, 0%, 0%, 0%;
+            /* background-repeat: no-repeat; */
+            /* background-size: 100%; */
+        }
+
+        .div1 {
+            float: right;
+            width: 30%;
+            height: 20%;
+            margin-right: 5%;
+            margin-top: 0%;
+
+
+        }
+
+        .div2 {
+            float: right;
+            height: 60%;
+            width: 60%;
+            margin-right: 20%;
+            margin-top: 0%;
+            margin-bottom: 2%;
+        }
+
+        .div3 {
+            float: left;
+            margin-top: 3%;
+            margin-left: 2%;
+            width: 50%
+        }
+
+        .div4 {
+            float: left;
+            margin-top: 5%;
+            margin-left: 2%;
+
+            width: 50%;
+        }
+
+        .div5 {
+            float: left;
+            margin-top: 1%;
+            margin-left: 35%;
+            width: 10%;
+            height: 2%;
+        }
+
+        .input1 {
+            width: 100%;
+            background: rgba(3, 3, 5, 0.7);
+            color: white;
+        }
+
+        .input2 {
+
+            background: rgba(3, 3, 5, 0.7);
+            color: white;
+            width: 50%;
+            padding: 0%
+        }
+
+
+
+        .conv {
+            width: 100%;
+            height: 400px;
+            background: rgba(3, 3, 5, 0.7);
+            color: white;
+        }
+
+        .table1 {
+            margin-left: 0px;
+            border: 1px solid black;
+            text-align: center;
+            float: left;
+            width: 80%;
+        }
+
+        .thehead1 th {
+
+            border: 1px solid rgb(80, 11, 11);
+            color: aliceblue;
+            background: rgba(3, 3, 5, 0.7);
+            font-size: 15px;
+            width: 10%;
+        }
+
+        .thehead1 {
+
+            border: 1px solid rgb(80, 11, 11);
+            color: white;
+            background: rgba(3, 3, 5, 0.7);
+            font-size: 15px;
+            width: 10%;
+        }
+
+
+
+
+        .tbody1 tr td {
+            border: 1px solid rgb(80, 11, 11);
+            color: white;
+            background: rgba(3, 3, 5, 0.7);
+            font-size: 15px;
+            width: 10%;
+        }
+
+        .tbody1 tr td {
+            border: 1px solid rgb(80, 11, 11);
+            color: white;
+            background: rgba(3, 3, 5, 0.7);
+            font-size: 15px;
+            width: 10%;
+        }
+
+        .sub {
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            font-weight: 900;
+            color: rgb(119, 15, 15);
+            border-radius: 20px;
+            font-size: 18px;
+
+        }
+
+        .sub:hover {
+            background: rgba(10, 35, 58, 0.308)
+        }
+
+        .div6 {
+            float: left;
+            width: 100%;
+            height: 100px;
+            background: rgba(43, 1, 1, 0.253);
+            font-size: 50px;
+            color: white;
+            padding-left: 10%;
+            padding-top: 1%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+        .height {
+            min-height: 200px;
+        }
+
+        .icon {
+            font-size: 47px;
+            color: #5CB85C;
+        }
+
+        .iconbig {
+            font-size: 77px;
+            color: #5CB85C;
+        }
+
+        .table>tbody>tr>.emptyrow {
+            border-top: none;
+        }
+
+        .table>thead>tr>.emptyrow {
+            border-bottom: none;
+        }
+
+        .table>tbody>tr>.highrow {
+            border-top: 3px solid;
+        }
+
+        .table-responsive {
+            width: 50%;
+            color: rgb(255, 255, 255);
+            margin-left: 2%;
+
+        }
+    .sonic{
+        color: white;
+    }
+  
+    </style>
+    <!-- <script src="https://blockly.webduino.io/lib/jquery-1.9.1.min.js"></script>
+    <script src="https://blockly.webduino.io/components/webduino-js/dist/webduino-all.min.js"></script>
+    <script src="https://blockly.webduino.io/lib/webduino-blockly.js"></script>
+    <script src="https://blockly.webduino.io/lib/firebase.js"></script>
+    <script src="https://blockly.webduino.io/lib/runtime.min.js"></script> -->
+
 </head>
+
 <body>
-<h3>商品名稱/價格</h3>
-<h3> {{catagories}} </h3>
-<h3>帳戶名稱/姓名/餘額</h3>
-<h3> {{balance}} </h3>
+    <div class="div6">Franklin Medium Store</div>
+    <div class="div1">
+
+        <img src='../static/images/ai.gif' alt="" class="div2">
+
+
+        <input type="text" class="input1" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2"
+            id="You" name="You">
+
+        <button class="btn btn-outline-secondary" type="button" id="button">Button</button>
+
+
+        <textarea class="conv" id="conversation" name="description"></textarea>
+    </div>
+    <div class="div3">
+
+        <button class="btn btn-outline-secondary" type="button1" id="product1" value="雪碧">雪碧</button>
+        <button class="btn btn-outline-secondary" type="button" id="product2" value="茶裏王">茶裏王</button>
+        <button class="btn btn-outline-secondary" type="button" id="product3" value="衛生紙">衛生紙</button>
+        <button class="btn btn-outline-secondary" type="button" id="product4" value="刮鬍刀">刮鬍刀</button>
+        <button class="btn btn-outline-secondary" type="button" id="product5" value="阿Q桶麵">阿Q桶麵</button>
+        <button class="btn btn-outline-secondary" type="button" id="product6" value="維力炸醬麵">維力炸醬麵</button>
+        <button class="btn btn-outline-secondary" type="button" id="product7" value="可樂">可樂</button>
+        <button class="btn btn-outline-secondary" type="button" id="product8" value="伯朗咖啡">伯朗咖啡</button>
+        <button class="btn btn-outline-secondary" type="button" id="product9" value="樂事原味洋芋片">樂事原味洋芋片</button>
+        <button class="btn btn-outline-secondary" type="button" id="product10" value="義美泡芙">義美泡芙</button>
+
+    </div>
+
+    <div class="div4">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table class="table1">
+                <thead class="thehead1">
+                    <th>
+                        Product
+                    </th>
+                    <th>
+                        Qty
+                    </th>
+                    <th>
+                        刪除
+                    </th>
+                </thead>
+                <tbody class="tbody1" id="tbody1">
+                    <tr id="tr1">
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </form>
+        <div class="div5">
+            <button class="btn btn-outline-secondary" type="button" id="submit">結帳</button>
+        </div>
+
+
+
+
+
+    </div>
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <td>
+                        <strong>Item Name</strong>
+                    </td>
+                    <td class="text-xs-center">
+                        <strong>Item Price</strong>
+                    </td>
+                    <td class="text-xs-center">
+                        <strong>Item Quantity</strong>
+                    </td>
+                    <td class="text-xs-right">
+                        <strong>Total</strong>
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="receipt">
+                <!-- <tr>
+                    <td>Samsung Galaxy S5</td>
+                    <td class="text-xs-center">$900</td>
+                    <td class="text-xs-center">1</td>
+                    <td class="text-xs-right">$900</td>
+                </tr>
+
+                <tr>
+                    <td class="highrow"></td>
+                    <td class="highrow">2018/13/22</td>
+                    <td class="highrow text-xs-center">
+                        <strong>Time</strong>
+                    </td>
+                    <td class="highrow text-xs-right"></td>
+                </tr>
+
+                <tr>
+                    <td class="emptyrow">
+                        <i class="fa fa-barcode iconbig"></i>
+                    </td>
+                    <td class="emptyrow"></td>
+                    <td class="emptyrow text-xs-center">
+                        <strong>Total</strong>
+                    </td>
+                    <td class="emptyrow text-xs-right">$978.00</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <!-- <div>
+        <h2 id="demo-area-01-show" class="sonic">123</h2>
+    </div> -->
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+// --------------------detection
+
+   var ultrasonic;
+    
+    
+
+
+
+
+
+
+
+
+
+
+// --------------------detection
+
+
+
+
+
+
+
+
+
+
+
+
+        $(document).ready(function () {
+            // 機器人
+            $('#button').click(function () {
+                console.log('hellworld')
+                text = $('#You').val()
+
+                $.get('../bot', { 'You': text }, function (data) {
+                    $('#conversation').append('You: ' + text + '\n');
+                    $('#conversation').append('BOT: ' + data + '\n');
+
+                })
+                $('#You').val('')
+
+            })
+
+            $.each([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], function (i, name) {
+                // 雪碧
+                $('#tbody1').on('click', '#del' + i, function () {
+
+                    $(this).parents('tr').remove();
+                    $('#product' + i).one('click', function () {
+
+                        $('#tbody1').append("<tr><td>" + $(this).val() + `</td><td><input id="p${i}" type="text" class='input2'></td><td> <button class="btn btn-outline-secondary" type="button" 
+                id="del${i}">Delete</button></td></tr>`)
+
+
+                    })
+                })
+                $('#product' + i).one('click', function () {
+
+                    $('#tbody1').append("<tr><td>" + $(this).val() + `</td><td><input id="p${i}" type="text" class='input2'></td><td> <button class="btn btn-outline-secondary" type="button" 
+                id="del${i}">Delete</button></td></tr>`)
+                })
+            })
+
+            // 結帳送出
+
+            $('#submit').click(function () {
+                product1 = $('#product1').val()
+                ProductValue1 = $('#p1').val()
+                product2 = $('#product2').val()
+                ProductValue2 = $('#p2').val()
+                product3 = $('#product3').val()
+                ProductValue3 = $('#p3').val()
+                product4 = $('#product4').val()
+                ProductValue4 = $('#p4').val()
+                product5 = $('#product5').val()
+                ProductValue5 = $('#p5').val()
+                product6 = $('#product6').val()
+                ProductValue6 = $('#p6').val()
+                product7 = $('#product7').val()
+                ProductValue7 = $('#p7').val()
+                product8 = $('#product8').val()
+                ProductValue8 = $('#p8').val()
+                product9 = $('#product9').val()
+                ProductValue9 = $('#p9').val()
+                product10 = $('#product10').val()
+                ProductValue10 = $('#p10').val()
+
+                checkout = {
+                    '雪碧': ProductValue1, '茶裏王': ProductValue2, '衛生紙': ProductValue3
+                    , '刮鬍刀': ProductValue4, '阿Q桶麵': ProductValue5, '維力炸醬麵': ProductValue6, '可樂': ProductValue7
+                    , '伯朗咖啡': ProductValue8, '樂事原味洋芋片': ProductValue9, '義美泡芙': ProductValue10
+                }
+
+                $.each(checkout, function (key, value) {
+                    if (value == null) {
+                        checkout[key] = 0
+
+                    }
+                })
+                console.log(checkout)
+
+                $.getJSON('../checkout', checkout, function (data) {
+                    console.log(data['price'])
+
+                    $.each(checkout, function (key, value) {
+                        if (value != 0) {
+                            price = data['price'][key]
+                            $('#receipt').prepend(`<tr>
+                    <td>${key}</td>
+                    <td class="text-xs-center">${price}</td>
+                    <td class="text-xs-center">${value}</td>
+                    <td class="text-xs-right">${price}</td>
+                </tr>`
+                            );
+
+                        }
+                    })
+
+                    balance = data['balance']
+                    time = data['time']
+                    cost = data['total_cost']
+                    $('#receipt').append(`<tr>
+                    <td class="highrow"></td>
+                    <td class="highrow">${time}</td>
+                    <td class="highrow text-xs-center">
+                        <strong></strong>
+                    </td>
+                    <td class="highrow text-xs-right"></td>
+                </tr>
+
+                <tr>
+                    <td class="emptyrow">
+                        <i class="fa fa-barcode iconbig"></i>
+                    </td>
+                    <td class="emptyrow">Balance: ${balance}</td>
+                    <td class="emptyrow text-xs-center">
+                        <strong>Total</strong>
+                    </td>
+                    <td class="emptyrow text-xs-right">${cost}</td>
+                </tr>`)
+
+
+                })
+            })
+
+            function myTimer() {
+                $.get('../speechbot', {}, function (data) {
+                    // 結帳
+                    if (data == 'CheckOut') {
+                        product1 = $('#product1').val()
+                        ProductValue1 = $('#p1').val()
+                        product2 = $('#product2').val()
+                        ProductValue2 = $('#p2').val()
+                        product3 = $('#product3').val()
+                        ProductValue3 = $('#p3').val()
+                        product4 = $('#product4').val()
+                        ProductValue4 = $('#p4').val()
+                        product5 = $('#product5').val()
+                        ProductValue5 = $('#p5').val()
+                        product6 = $('#product6').val()
+                        ProductValue6 = $('#p6').val()
+                        product7 = $('#product7').val()
+                        ProductValue7 = $('#p7').val()
+                        product8 = $('#product8').val()
+                        ProductValue8 = $('#p8').val()
+                        product9 = $('#product9').val()
+                        ProductValue9 = $('#p9').val()
+                        product10 = $('#product10').val()
+                        ProductValue10 = $('#p10').val()
+
+                        checkout = {
+                            '雪碧': ProductValue1, '茶裏王': ProductValue2, '衛生紙': ProductValue3
+                            , '刮鬍刀': ProductValue4, '阿Q桶麵': ProductValue5, '維力炸醬麵': ProductValue6, '可樂': ProductValue7
+                            , '伯朗咖啡': ProductValue8, '樂事原味洋芋片': ProductValue9, '義美泡芙': ProductValue10
+                        }
+
+                        $.each(checkout, function (key, value) {
+                            if (value == null) {
+                                checkout[key] = 0
+
+                            }
+                        })
+                        console.log(checkout)
+
+                        $.getJSON('../checkout', checkout, function (data) {
+                            console.log(data['price'])
+
+                            $.each(checkout, function (key, value) {
+                                if (value != 0) {
+                                    price = data['price'][key]
+                                    $('#receipt').prepend(`<tr>
+                    <td>${key}</td>
+                    <td class="text-xs-center">${price}</td>
+                    <td class="text-xs-center">${value}</td>
+                    <td class="text-xs-right">${price}</td>
+                </tr>`
+                                    );
+
+                                }
+                            })
+
+                            balance = data['balance']
+                            time = data['time']
+                            cost = data['total_cost']
+                            $('#receipt').append(`<tr>
+                    <td class="highrow"></td>
+                    <td class="highrow">${time}</td>
+                    <td class="highrow text-xs-center">
+                        <strong></strong>
+                    </td>
+                    <td class="highrow text-xs-right"></td>
+                </tr>
+
+                <tr>
+                    <td class="emptyrow">
+                        <i class="fa fa-barcode iconbig"></i>
+                    </td>
+                    <td class="emptyrow">Balance: ${balance}</td>
+                    <td class="emptyrow text-xs-center">
+                        <strong>Total</strong>
+                    </td>
+                    <td class="emptyrow text-xs-right">${cost}</td>
+                </tr>`)
+
+
+                        })
+
+
+                    }
+                    // ----------
+
+                    if (data == 'google') {
+                 
+                        $.get('../googleSearch', {}, function (data) {
+
+                        })
+
+                    }
+
+                    // ----------
+                    if (data['triger'] == 'wiki') {
+                        console.log('ggggggggggggg')
+                        console.log(data['request'])
+
+                            $('#conversation').append('wiki result: \n'+data['article']);
+
+
+                    }
+                     // ----------
+                     if (data == 'Youtube') {
+            
+                        $.get('../YoutubeSearch', {}, function (data) {
+                            // console.log('kkkkkkkkkkkkkkkkkkk')
+                            // $('#conversation').append('wiki result: \n'+data);
+
+                        })
+
+                    }
+                            // ----------
+                            if (data['triger'] == 'exchange') {
+                        console.log('ggggggggggggg')
+                        console.log(data['request'])
+
+                            $('#conversation').append('Exchange Rate: \n'+data['data']);
+
+
+                    }
+
+                            // ----------
+
+
+
+               
+
+
+                })
+            }
+            
+
+   
+
+
+
+
+
+            var myVar = setInterval(myTimer, 5500);
+
+
+    // boardReady({ device: 'mkYDX' }, function (board) {
+    //     board.systemReset();
+    //     board.samplingInterval = 20;
+    //     ultrasonic = getUltrasonic(board, 11, 10);
+    //     ultrasonic.ping(function (cm) {
+    //         console.log(ultrasonic.distance);
+    //         document.getElementById("demo-area-01-show").innerHTML = ultrasonic.distance;
+    //     }, 500);
+    // });
+
+
+
+
+
+
+
+        });
+
+    </script>
+
+    <script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+
 
 </body>
+
 </html>
